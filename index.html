@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Engineering portfolio of Shreyas G. Chandhavar — mechanical design, CFD, structural analysis and engineering computation." />
+  <meta name="theme-color" content="#f3f1eb" />
+  <title>Shreyas G. Chandhavar — Mechanical Design & Simulation</title>
+  <style>
+    :root{--paper:#f3f1eb;--paper-2:#ebe8df;--ink:#111317;--muted:#626871;--line:#cfcac0;--blue:#2459e0;--panel:#171a20;--panel-2:#20242c;--white:#fafafa;--max:1180px;--radius:18px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.wrap{width:min(calc(100% - 40px),var(--max));margin:auto}.eyebrow{font-size:.73rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--blue)}
+    .nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(16px);background:rgba(243,241,235,.88);border-bottom:1px solid rgba(17,19,23,.1)}.nav-inner{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:850;letter-spacing:-.03em;font-size:1.04rem}.brand span{color:var(--blue)}.nav-links{display:flex;gap:28px;align-items:center;color:#3d424a;font-size:.92rem;font-weight:650}.nav-links a:hover{color:var(--blue)}.nav-cta{border:1px solid var(--ink);padding:10px 14px;border-radius:999px}
+    .hero{min-height:calc(100vh - 72px);display:grid;grid-template-columns:1.18fr .82fr;gap:70px;align-items:center;padding:76px 0 70px}h1{font-size:clamp(3.7rem,8vw,7.9rem);letter-spacing:-.075em;line-height:.84;margin:18px 0 28px;font-weight:900}.hero h1 span{display:block}.hero h1 .outline{color:transparent;-webkit-text-stroke:1.4px var(--ink);text-stroke:1.4px var(--ink)}.hero-copy{max-width:680px;font-size:1.15rem;color:#4d535c}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.button{display:inline-flex;align-items:center;gap:10px;padding:13px 18px;border-radius:999px;font-weight:800;font-size:.92rem;transition:.2s ease}.button.primary{background:var(--ink);color:white}.button.primary:hover{transform:translateY(-2px);background:var(--blue)}.button.secondary{border:1px solid #aaa69e;background:rgba(255,255,255,.25)}.button.secondary:hover{border-color:var(--ink)}
+    .hero-board{background:var(--panel);color:white;border-radius:24px;overflow:hidden;box-shadow:0 28px 80px rgba(20,24,32,.15)}.board-head{display:flex;justify-content:space-between;padding:18px 20px;border-bottom:1px solid #30343e;color:#aab1bc;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase}.board-image{aspect-ratio:4/3;object-fit:cover;background:#20242c}.board-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #30343e}.board-grid div{padding:18px 15px;border-right:1px solid #30343e}.board-grid div:last-child{border-right:0}.board-grid strong{display:block;font-size:1.14rem}.board-grid span{font-size:.72rem;color:#929aa8;text-transform:uppercase;letter-spacing:.08em}
+    .ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.ticker .wrap{display:grid;grid-template-columns:repeat(4,1fr)}.ticker-item{padding:20px 18px;border-right:1px solid var(--line)}.ticker-item:first-child{padding-left:0}.ticker-item:last-child{border-right:0}.ticker-item b{display:block;font-size:.95rem}.ticker-item span{font-size:.78rem;color:var(--muted)}section{padding:112px 0}.section-head{display:grid;grid-template-columns:.42fr 1fr;gap:30px;margin-bottom:48px}.section-head h2{font-size:clamp(2.4rem,4.6vw,4.6rem);letter-spacing:-.055em;line-height:.95;margin:0}.section-head p{max-width:600px;color:var(--muted);font-size:1.02rem;margin:4px 0 0}
+    .projects{display:grid;gap:22px}.project{display:grid;grid-template-columns:1fr 1fr;min-height:540px;background:#faf9f6;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.project:nth-child(even) .project-media{order:2}.project-media{background:#dad8d1;min-height:430px;overflow:hidden;position:relative}.project-media img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}.project:hover .project-media img{transform:scale(1.025)}.project-body{padding:52px;display:flex;flex-direction:column}.project-number{font-size:.78rem;color:var(--muted);font-weight:800;letter-spacing:.1em}.project h3{font-size:2.15rem;line-height:1.05;letter-spacing:-.04em;margin:17px 0}.project p{color:var(--muted);margin:0 0 26px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}.tag{border:1px solid #cbc7be;border-radius:999px;padding:7px 10px;font-size:.74rem;font-weight:750}.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:8px 0 30px}.fact{border-top:1px solid var(--line);padding-top:13px}.fact b{display:block;font-size:1rem}.fact span{font-size:.72rem;color:var(--muted)}.project-link{margin-top:auto;font-weight:850;display:inline-flex;align-items:center;gap:8px;color:var(--blue)}
+    .cfd-art{height:100%;min-height:430px;background:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px),radial-gradient(circle at 30% 44%,rgba(36,89,224,.7),transparent 22%),radial-gradient(circle at 72% 58%,rgba(71,108,237,.3),transparent 28%),#10141b;background-size:36px 36px,36px 36px,auto,auto,auto;color:white;display:flex;align-items:center;justify-content:center;padding:36px}.airfoil{width:88%;aspect-ratio:2.8/1;border-radius:55% 12% 45% 55% / 50% 42% 58% 50%;border:2px solid rgba(255,255,255,.85);transform:rotate(-7deg);box-shadow:0 0 0 22px rgba(255,255,255,.025),0 0 60px rgba(36,89,224,.25);position:relative}.airfoil:after{content:"NACA 0018 · MULTI-ELEMENT";position:absolute;left:12%;top:44%;font-size:.68rem;letter-spacing:.16em;color:#cbd4ff}
+    .dark{background:var(--panel);color:white}.dark .eyebrow{color:#8ba7ff}.dark .section-head p,.dark .muted{color:#aeb4be}.capabilities{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#353943;border:1px solid #353943;border-radius:var(--radius);overflow:hidden}.capability{background:var(--panel);padding:34px;min-height:250px}.capability .icon{font-size:1.6rem;margin-bottom:42px}.capability h3{font-size:1.12rem;margin:0 0 10px}.capability p{font-size:.87rem;color:#aeb4be}.timeline{display:grid;grid-template-columns:.42fr 1fr;gap:30px}.timeline-item{border-top:1px solid var(--line);padding:28px 0;display:grid;grid-template-columns:180px 1fr;gap:25px}.timeline-item h3{margin:0;font-size:1.3rem;letter-spacing:-.02em}.timeline-item p{color:var(--muted);margin:8px 0}.timeline-item .date{color:var(--muted);font-size:.86rem;font-weight:700}.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}.skills span{background:var(--paper-2);padding:8px 11px;border-radius:8px;font-size:.76rem;font-weight:700}.contact{background:var(--blue);color:white;border-radius:24px;padding:72px;display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:end}.contact h2{font-size:clamp(3rem,6vw,6rem);line-height:.88;letter-spacing:-.06em;margin:12px 0 0}.contact p{color:#dfe7ff;max-width:430px}.contact .button{background:white;color:var(--ink)}footer{padding:34px 0 46px;color:var(--muted);font-size:.8rem}.footer-row{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:28px}.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:900px){.hero,.project,.section-head,.timeline,.contact{grid-template-columns:1fr}.hero{padding-top:48px;gap:44px}.project:nth-child(even) .project-media{order:0}.capabilities{grid-template-columns:1fr 1fr}.ticker .wrap{grid-template-columns:1fr 1fr}.ticker-item:nth-child(2){border-right:0}.timeline-item{grid-template-columns:1fr}.contact{padding:48px}}
+    @media(max-width:640px){.wrap{width:min(calc(100% - 24px),var(--max))}.nav-links a:not(.nav-cta){display:none}.hero{min-height:auto;padding-bottom:50px}h1{font-size:clamp(3.2rem,18vw,5rem)}section{padding:76px 0}.project-body{padding:30px}.facts{grid-template-columns:1fr}.capabilities{grid-template-columns:1fr}.ticker .wrap{grid-template-columns:1fr}.ticker-item,.ticker-item:first-child{padding:15px 0;border-right:0;border-bottom:1px solid var(--line)}.ticker-item:last-child{border-bottom:0}.contact{padding:34px 28px}.footer-row{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">SGC<span>.</span></a>
+      <div class="nav-links">
+        <a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#experience">Experience</a><a href="#about">About</a>
+        <a class="nav-cta" href="https://github.com/shreyas-chandhavar" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">Mechanical Design · CFD · Engineering Computation</div>
+        <h1><span>Design.</span><span class="outline">Analyze.</span><span>Validate.</span></h1>
+        <p class="hero-copy">I’m Shreyas G. Chandhavar, a mechanical and sustainable-energy engineer building traceable engineering solutions from first-principles calculations through CAD, simulation and design decisions.</p>
+        <div class="buttons">
+          <a class="button primary" href="#work">Explore selected work ↓</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/shreyasgowrishankarchandhavar/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+      </div>
+      <a class="hero-board" href="https://github.com/shreyas-chandhavar/lifting-fixture-design-analysis" target="_blank" rel="noreferrer" aria-label="Open lifting fixture project on GitHub">
+        <div class="board-head"><span>Featured design study</span><span>01 / 03</span></div>
+        <img class="board-image" src="https://raw.githubusercontent.com/shreyas-chandhavar/lifting-fixture-design-analysis/main/cad_assembly_isometric.png" alt="SolidWorks lifting fixture assembly" />
+        <div class="board-grid"><div><strong>3.826 kN</strong><span>Design load</span></div><div><strong>60×30×3</strong><span>Selected RHS</span></div><div><strong>~224 MPa</strong><span>Local FEA peak</span></div></div>
+      </a>
+    </div>
+
+    <div class="ticker"><div class="wrap">
+      <div class="ticker-item"><b>SolidWorks · NX · Inventor</b><span>Mechanical design & CAD</span></div>
+      <div class="ticker-item"><b>OpenFOAM · ANSYS · ParaView</b><span>CFD & simulation</span></div>
+      <div class="ticker-item"><b>MATLAB · Python</b><span>Engineering computation</span></div>
+      <div class="ticker-item"><b>GD&T · DFM/DFA</b><span>Production-minded design</span></div>
+    </div></div>
+
+    <section id="work"><div class="wrap">
+      <div class="section-head reveal"><div class="eyebrow">Selected engineering work</div><div><h2>Proof, not a skill list.</h2><p>Each project is framed as an engineering decision trail: requirements, assumptions, model, verification, result and limitations.</p></div></div>
+      <div class="projects">
+        <article class="project reveal">
+          <div class="project-media"><img src="https://raw.githubusercontent.com/shreyas-chandhavar/lifting-fixture-design-analysis/main/cad_assembly_isometric.png" alt="Adjustable lifting fixture CAD assembly" /></div>
+          <div class="project-body">
+            <div class="project-number">01 · MECHANICAL DESIGN / STRUCTURES</div><h3>Adjustable Lifting Fixture</h3>
+            <p>End-to-end concept design for a 300 kg eccentric load. Reactions, beam sizing, pin/lug failure modes and connection geometry were calculated before CAD, followed by a preliminary SolidWorks static FEA.</p>
+            <div class="tags"><span class="tag">SolidWorks</span><span class="tag">MATLAB / Octave</span><span class="tag">FEA</span><span class="tag">S355</span><span class="tag">Load path</span></div>
+            <div class="facts"><div class="fact"><b>95.6 MPa</b><span>Nominal beam stress</span></div><div class="fact"><b>1.265 mm</b><span>Analytical deflection</span></div><div class="fact"><b>3 candidates</b><span>RHS sections screened</span></div></div>
+            <a class="project-link" href="https://github.com/shreyas-chandhavar/lifting-fixture-design-analysis" target="_blank" rel="noreferrer">Open technical repository →</a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-media"><div class="cfd-art"><div class="airfoil"></div></div></div>
+          <div class="project-body">
+            <div class="project-number">02 · CFD / WIND-ASSISTED PROPULSION</div><h3>Multi-Element WingSail CFD</h3>
+            <p>MSc thesis study of a NACA 0018-based multi-element rigid wingsail. The numerical workflow investigated flap deflection, hinge position, gap and angle of attack, resolving aerodynamic loads into ship-referenced thrust and side force.</p>
+            <div class="tags"><span class="tag">OpenFOAM</span><span class="tag">ParaView</span><span class="tag">SST k-ω</span><span class="tag">RANS</span><span class="tag">Aerodynamics</span></div>
+            <div class="facts"><div class="fact"><b>2D steady RANS</b><span>Numerical model</span></div><div class="fact"><b>NACA 0018</b><span>Main element</span></div><div class="fact"><b>Thrust ≠ max lift</b><span>Key design finding</span></div></div>
+            <a class="project-link" href="https://github.com/shreyas-chandhavar/multi-element-wingsail-cfd" target="_blank" rel="noreferrer">Open thesis companion →</a>
+          </div>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-media"><img src="https://raw.githubusercontent.com/shreyas-chandhavar/cantilever-beam-structural-analyzer/main/figure5_original_vs_redesigned.png" alt="Original versus redesigned beam performance plot" /></div>
+          <div class="project-body">
+            <div class="project-number">03 · MATLAB / STRUCTURAL SIZING</div><h3>Cantilever Beam Design Analyzer</h3>
+            <p>A structural analysis tool that separates strength from serviceability, calculates allowable loads, analytically resizes the section and checks the redesign with a 50-point parametric study.</p>
+            <div class="tags"><span class="tag">MATLAB</span><span class="tag">Beam theory</span><span class="tag">Parametric study</span><span class="tag">Design sizing</span></div>
+            <div class="facts"><div class="fact"><b>6.13</b><span>Initial yield FoS</span></div><div class="fact"><b>9.78 mm</b><span>Initial tip deflection</span></div><div class="fact"><b>125.07 mm</b><span>Required height</span></div></div>
+            <a class="project-link" href="https://github.com/shreyas-chandhavar/cantilever-beam-structural-analyzer" target="_blank" rel="noreferrer">Open MATLAB repository →</a>
+          </div>
+        </article>
+      </div>
+    </div></section>
+
+    <section class="dark" id="capabilities"><div class="wrap">
+      <div class="section-head reveal"><div class="eyebrow">Engineering capabilities</div><div><h2>From requirements to evidence.</h2><p>I work across the chain rather than treating CAD, simulation and computation as isolated software skills.</p></div></div>
+      <div class="capabilities reveal">
+        <div class="capability"><div class="icon">⌖</div><h3>Mechanical Design</h3><p>3D parts and assemblies, engineering drawings, GD&T, tolerance reasoning, DFM/DFA and load-path driven geometry.</p></div>
+        <div class="capability"><div class="icon">∿</div><h3>CFD & Aerodynamics</h3><p>RANS modelling, meshing, convergence assessment, aerodynamic forces and engineering interpretation.</p></div>
+        <div class="capability"><div class="icon">∑</div><h3>Engineering Computation</h3><p>MATLAB and Python tools for structural calculations, parametric studies, plotting and design-space exploration.</p></div>
+        <div class="capability"><div class="icon">△</div><h3>Verification</h3><p>Analytical checks, preliminary FEA, correlation, utilization ratios and explicit documentation of assumptions and limitations.</p></div>
+      </div>
+    </div></section>
+
+    <section id="experience"><div class="wrap timeline">
+      <div><div class="eyebrow">Experience & education</div></div>
+      <div>
+        <div class="timeline-item reveal"><div class="date">2022 — 2024</div><div><h3>Design Engineer · Mac Precitec India</h3><p>Mechanical design of precision cutting-tool components and assemblies, including manufacturing drawings, GD&T, tolerance analysis, DFM/DFA and production liaison.</p><div class="skills"><span>50+ components released</span><span>Up to 25% cycle-time reduction</span><span>Inventor</span><span>SolidWorks</span><span>Vault PDM</span></div></div></div>
+        <div class="timeline-item reveal"><div class="date">MSc · 2026</div><div><h3>Lund University · Sustainable Energy Engineering</h3><p>Thesis: CFD Investigation of Multi-Element Airfoils for WingSails, focused on rigid wingsail aerodynamics for wind-assisted ship propulsion.</p><div class="skills"><span>CFD</span><span>Wind energy</span><span>Heat transfer</span><span>Energy systems</span></div></div></div>
+        <div class="timeline-item reveal"><div class="date">BEng · 2022</div><div><h3>Mechanical Engineering</h3><p>Foundation in mechanical design, solid mechanics, fluid mechanics, thermal sciences, manufacturing and engineering analysis.</p></div></div>
+      </div>
+    </div></section>
+
+    <section id="about"><div class="wrap"><div class="contact reveal">
+      <div><div class="eyebrow" style="color:#dfe7ff">About / Contact</div><h2>Engineering that can be explained.</h2></div>
+      <div><p>I care about traceable decisions: why a dimension exists, what governs a design, where a model is valid, and what still needs verification. Explore the repositories for the calculations, assumptions, CAD evidence and engineering notes behind the work.</p><div class="buttons"><a class="button" href="https://github.com/shreyas-chandhavar" target="_blank" rel="noreferrer">GitHub ↗</a><a class="button" href="https://www.linkedin.com/in/shreyasgowrishankarchandhavar/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div>
+    </div></div></section>
+  </main>
+
+  <footer><div class="wrap footer-row"><span>© 2026 Shreyas G. Chandhavar</span><span>Mechanical Design · CFD · Engineering Computation</span></div></footer>
+  <script>const reveal=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');reveal.unobserve(entry.target)}})},{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>reveal.observe(el));</script>
+</body>
+</html>
