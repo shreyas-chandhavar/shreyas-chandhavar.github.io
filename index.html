@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Engineering portfolio of Shreyas G. Chandhavar — mechanical design, product development, CFD and engineering computation." />
+  <meta name="description" content="Engineering portfolio of Shreyas G. Chandhavar — mechanical design, product development, CFD, aero-structural analysis and engineering computation." />
   <meta name="theme-color" content="#f4f1e9" />
   <link rel="canonical" href="https://shreyas-chandhavar.github.io/" />
   <link rel="stylesheet" href="style.css" />
@@ -43,13 +43,13 @@
         </div>
       </div>
 
-      <a class="feature" href="https://github.com/shreyas-chandhavar/lifting-fixture-design-analysis" target="_blank" rel="noreferrer">
-        <div class="feature-head"><span>Featured design study</span><span>01 / 03</span></div>
-        <img src="https://raw.githubusercontent.com/shreyas-chandhavar/lifting-fixture-design-analysis/main/cad_assembly_isometric.png" alt="SolidWorks lifting fixture assembly" />
+      <a class="feature aero" href="https://github.com/shreyas-chandhavar/AeroStruct-15MW" target="_blank" rel="noreferrer">
+        <div class="feature-head"><span>Featured aero-structural study</span><span>01 / 04</span></div>
+        <img src="https://raw.githubusercontent.com/shreyas-chandhavar/AeroStruct-15MW/main/results/figures/final_root_moment_envelope.svg" alt="Baseline versus optimized flapwise root-moment envelope for the AeroStruct-15MW project" />
         <div class="feature-metrics">
-          <div><b>3.826 kN</b><span>Design load</span></div>
-          <div><b>60×30×3</b><span>Selected RHS</span></div>
-          <div><b>~224 MPa</b><span>Local FEA peak</span></div>
+          <div><b>−5.65%</b><span>Rated root moment</span></div>
+          <div><b>−7.23%</b><span>Rotating tip deflection</span></div>
+          <div><b>−0.078%</b><span>AEP proxy change</span></div>
         </div>
       </a>
     </div>
@@ -57,7 +57,7 @@
     <div class="strip"><div class="wrap stripin">
       <div><b>SolidWorks · NX · Inventor</b><span>Mechanical design & CAD</span></div>
       <div><b>OpenFOAM · ANSYS · ParaView</b><span>CFD & simulation</span></div>
-      <div><b>MATLAB · Python</b><span>Engineering computation</span></div>
+      <div><b>MATLAB · Python · ML</b><span>Engineering computation & optimization</span></div>
       <div><b>GD&T · DFM/DFA</b><span>Production-minded design</span></div>
     </div></div>
 
@@ -69,9 +69,21 @@
 
       <div class="projects">
         <article class="project reveal">
+          <div class="media contain"><img src="https://raw.githubusercontent.com/shreyas-chandhavar/AeroStruct-15MW/main/results/figures/final_root_moment_envelope.svg" alt="AeroStruct-15MW baseline versus optimized flapwise root-moment envelope" /></div>
+          <div class="body">
+            <div class="num">01 · OFFSHORE WIND / AERO-STRUCTURAL OPTIMIZATION</div><h3>AeroStruct-15MW</h3>
+            <p>Independent reduced-order study built around the public IEA 15-MW reference turbine. I developed and validated a BEM aerodynamic model, coupled it to rotating-beam structural analysis, generated a physics design database, trained ML surrogates, searched 100,000 candidate designs and re-verified the Pareto-selected solutions with the physics model.</p>
+            <div class="tags"><span class="tag">Python</span><span class="tag">BEM</span><span class="tag">Rotating-beam FEM</span><span class="tag">Machine Learning</span><span class="tag">Pareto optimization</span><span class="tag">IEA 15-MW</span></div>
+            <div class="facts"><div class="fact"><b>−5.65%</b><span>Rated root moment</span></div><div class="fact"><b>−7.23%</b><span>Rated rotating tip deflection</span></div><div class="fact"><b>−0.078%</b><span>Aerodynamic AEP proxy</span></div></div>
+            <p class="insight"><strong>Engineering conclusion:</strong> within the bounded reduced-order design space, the optimum moved toward smooth outboard aerodynamic load redistribution rather than additional structural material. The final candidate kept the DEL10 proxy effectively unchanged while reducing selected load and deflection metrics. Results are physics-verified within the model assumptions, not IEC/OpenFAST certification claims.</p>
+            <a class="plink" href="https://github.com/shreyas-chandhavar/AeroStruct-15MW" target="_blank" rel="noreferrer">Open complete technical repository →</a>
+          </div>
+        </article>
+
+        <article class="project reveal">
           <div class="media"><img src="https://raw.githubusercontent.com/shreyas-chandhavar/lifting-fixture-design-analysis/main/cad_assembly_isometric.png" alt="Adjustable lifting fixture CAD assembly" /></div>
           <div class="body">
-            <div class="num">01 · MECHANICAL DESIGN / STRUCTURES</div><h3>Adjustable Lifting Fixture</h3>
+            <div class="num">02 · MECHANICAL DESIGN / STRUCTURES</div><h3>Adjustable Lifting Fixture</h3>
             <p>End-to-end concept design for a 300 kg eccentric load. Reactions, beam sizing, pin/lug failure modes and connection geometry were calculated before CAD, followed by a preliminary SolidWorks static FEA.</p>
             <div class="tags"><span class="tag">SolidWorks</span><span class="tag">MATLAB / Octave</span><span class="tag">FEA</span><span class="tag">S355</span><span class="tag">Load path</span></div>
             <div class="facts"><div class="fact"><b>95.6 MPa</b><span>Nominal beam stress</span></div><div class="fact"><b>1.265 mm</b><span>Analytical deflection</span></div><div class="fact"><b>3 candidates</b><span>RHS sections screened</span></div></div>
@@ -82,7 +94,7 @@
         <article class="project reveal">
           <div class="media"><div class="cfd"><div class="foil"></div></div></div>
           <div class="body">
-            <div class="num">02 · CFD / WIND-ASSISTED PROPULSION</div><h3>Multi-Element WingSail CFD</h3>
+            <div class="num">03 · CFD / WIND-ASSISTED PROPULSION</div><h3>Multi-Element WingSail CFD</h3>
             <p>MSc thesis study of a NACA 0018-based rigid wingsail with hinged-flap and gap configurations. The OpenFOAM workflow examined flap deflection, hinge position, gap size and operating orientation, including thrust and side-force decomposition.</p>
             <div class="tags"><span class="tag">OpenFOAM</span><span class="tag">ParaView</span><span class="tag">SST k-ω</span><span class="tag">2D steady RANS</span><span class="tag">Aerodynamics</span></div>
             <div class="facts"><div class="fact"><b>NACA 0018</b><span>Baseline airfoil</span></div><div class="fact"><b>Validation first</b><span>Published-data comparison</span></div><div class="fact"><b>Thrust ≠ max lift</b><span>Key propulsion finding</span></div></div>
@@ -93,7 +105,7 @@
         <article class="project reveal">
           <div class="media"><img src="https://raw.githubusercontent.com/shreyas-chandhavar/cantilever-beam-structural-analyzer/main/figure5_original_vs_redesigned.png" alt="Original versus redesigned beam performance plot" /></div>
           <div class="body">
-            <div class="num">03 · MATLAB / STRUCTURAL SIZING</div><h3>Cantilever Beam Design Analyzer</h3>
+            <div class="num">04 · MATLAB / STRUCTURAL SIZING</div><h3>Cantilever Beam Design Analyzer</h3>
             <p>A structural analysis tool that separates strength from serviceability, calculates allowable loads, analytically resizes the section and checks the redesign with a 50-point parametric study.</p>
             <div class="tags"><span class="tag">MATLAB</span><span class="tag">Beam theory</span><span class="tag">Parametric study</span><span class="tag">Design sizing</span></div>
             <div class="facts"><div class="fact"><b>6.13</b><span>Initial yield FoS</span></div><div class="fact"><b>9.78 mm</b><span>Initial tip deflection</span></div><div class="fact"><b>125.07 mm</b><span>Required height</span></div></div>
@@ -111,8 +123,8 @@
       <div class="caps reveal">
         <div class="cap"><div class="sym">⌖</div><h3>Mechanical Design</h3><p>3D parts and assemblies, engineering drawings, GD&T, tolerance reasoning, DFM/DFA and load-path driven geometry.</p></div>
         <div class="cap"><div class="sym">∿</div><h3>CFD & Aerodynamics</h3><p>RANS modelling, meshing, convergence assessment, aerodynamic forces and engineering interpretation.</p></div>
-        <div class="cap"><div class="sym">∑</div><h3>Engineering Computation</h3><p>MATLAB and Python tools for structural calculations, parametric studies, plotting and design-space exploration.</p></div>
-        <div class="cap"><div class="sym">△</div><h3>Verification</h3><p>Analytical checks, preliminary FEA, correlation, utilization ratios and explicit documentation of assumptions and limitations.</p></div>
+        <div class="cap"><div class="sym">∑</div><h3>Engineering Computation</h3><p>MATLAB and Python tools for structural calculations, design-space exploration, surrogate modelling and optimization.</p></div>
+        <div class="cap"><div class="sym">△</div><h3>Verification</h3><p>Analytical checks, preliminary FEA, physics-model validation, surrogate cross-validation and explicit documentation of assumptions and limitations.</p></div>
       </div>
     </div></section>
 
