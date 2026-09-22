@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<rect width="1200" height="700" fill="#f4f1e9"/>
+<style>.t{font-family:Arial,sans-serif;fill:#101217}.s{font-family:Arial,sans-serif;fill:#626873}.b{fill:#fff;stroke:#c8c2b7;stroke-width:2}.a{stroke:#2357d9;stroke-width:4;fill:none;marker-end:url(#m)}.h{font-weight:700;font-size:26px}.p{font-size:18px}.k{font-size:15px;letter-spacing:1px;fill:#2357d9;font-weight:700}</style>
+<defs><marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#2357d9"/></marker></defs>
+<text x="70" y="68" class="t h">FLEX-445 — physics → design → verification</text>
+<text x="70" y="98" class="s p">AGARD 445.6 public benchmark · reduced-order aeroelastic architecture study</text>
+<g transform="translate(70,145)">
+<rect class="b" x="0" y="0" width="235" height="105" rx="18"/><text class="k" x="22" y="30">FOUNDATIONS</text><text class="t h" x="22" y="61" font-size="21">Typical section</text><text class="s p" x="22" y="87">Jones + Theodorsen</text>
+<path class="a" d="M245 52 H320"/>
+<rect class="b" x="330" y="0" width="235" height="105" rx="18"/><text class="k" x="352" y="30">BENCHMARK</text><text class="t h" x="352" y="61" font-size="21">AGARD 445.6</text><text class="s p" x="352" y="87">4-mode DLM / p-k</text>
+<path class="a" d="M575 52 H650"/>
+<rect class="b" x="660" y="0" width="235" height="105" rx="18"/><text class="k" x="682" y="30">ARCHITECTURE</text><text class="t h" x="682" y="61" font-size="21">Passive + active</text><text class="s p" x="682" y="87">fail-safe screening</text>
+<path class="a" d="M905 52 H980"/>
+<rect class="b" x="990" y="0" width="140" height="105" rx="18"/><text class="k" x="1011" y="30">DOE</text><text class="t h" x="1011" y="61" font-size="21">80</text><text class="s p" x="1011" y="87">physics cases</text>
+<path class="a" d="M1060 115 V190 H895"/>
+<rect class="b" x="660" y="190" width="235" height="105" rx="18"/><text class="k" x="682" y="220">SURROGATE</text><text class="t h" x="682" y="251" font-size="21">Polynomial Ridge</text><text class="s p" x="682" y="277">CV R² 0.981–0.992</text>
+<path class="a" d="M650 242 H575"/>
+<rect class="b" x="330" y="190" width="235" height="105" rx="18"/><text class="k" x="352" y="220">SEARCH</text><text class="t h" x="352" y="251" font-size="21">100,000 designs</text><text class="s p" x="352" y="277">29 Pareto-efficient</text>
+<path class="a" d="M320 242 H245"/>
+<rect class="b" x="0" y="190" width="235" height="105" rx="18"/><text class="k" x="22" y="220">RE-VERIFY</text><text class="t h" x="22" y="251" font-size="21">5 → 3 passed</text><text class="s p" x="22" y="277">original p-k physics</text>
+</g>
+<g transform="translate(70,505)">
+<rect x="0" y="0" width="1060" height="130" rx="20" fill="#171a20"/>
+<text x="28" y="34" fill="#90aaff" class="k">SELECTED PHYSICS-VERIFIED CANDIDATE</text>
+<text x="28" y="73" fill="white" class="h">+6.13% flutter margin</text>
+<text x="355" y="73" fill="white" class="h">25.0% active authority</text>
+<text x="720" y="73" fill="white" class="h">+4.25% fail-safe margin</text>
+<text x="28" y="105" fill="#aeb5c0" class="p">36.5–56.5% semispan · +24.36% GJ proxy · dry stability margin 0.53696 s⁻¹</text>
+</g></svg>
