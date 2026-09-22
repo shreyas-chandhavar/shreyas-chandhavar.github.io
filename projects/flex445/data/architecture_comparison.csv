@@ -1,0 +1,6 @@
+architecture,flutter_improvement_pct,active_authority_pct,fail_safe_improvement_pct,notes
+Baseline,0,0,0,Mach 0.901 reduced-order benchmark baseline
+Passive reference,3.474185,0,3.474185,Notional passive torsional-stiffening reference
+Robust active-only,6.116478,100,0,"25 Hz, 5 ms robust active reference"
+Deterministic hybrid,6.681121,50,3.474185,20% GJ proxy + 50% active authority
+ML/physics selected hybrid,6.1313,25.011468,4.2475,Minimum-active-authority verified candidate

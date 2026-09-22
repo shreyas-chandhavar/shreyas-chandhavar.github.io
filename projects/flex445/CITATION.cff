@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it as below and also cite the primary AGARD/NASA and PanelAero sources listed in REFERENCES.md."
+title: "FLEX-445: Physics-Guided Hybrid Flutter Mitigation on the AGARD 445.6 Benchmark"
+type: software
+authors:
+  - family-names: "Chandhavar"
+    given-names: "Shreyas G."
+year: 2026
+license: MIT
+repository-code: "https://github.com/shreyas-chandhavar/shreyas-chandhavar.github.io/tree/main/projects/flex445"
+keywords:
+  - aeroelasticity
+  - flutter
+  - AGARD 445.6
+  - doublet lattice method
+  - active control
+  - machine learning
