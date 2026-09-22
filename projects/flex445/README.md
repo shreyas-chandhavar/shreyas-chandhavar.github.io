@@ -31,6 +31,23 @@ The result is not “AI predicted a better wing.” ML was used only as a fast s
 
 ![FLEX-445 architecture trade](assets/flex445-trade.svg)
 
+
+## How the design evolved
+
+FLEX-445 was not a single “optimized wing” calculation. The architecture was modified in stages, and each stage changed what the next design decision meant.
+
+| Stage | Modification | Result | Engineering reason for the next step |
+|---|---|---|---|
+| Public AGARD 445.6 baseline | Reconstructed the weakened Model-3 benchmark with four structural modes and DLM/p-k aerodynamics | Representative mean absolute flutter-velocity error ≈ 6.02% | Establish a credible public baseline before changing the design |
+| Passive-only concept | Added local torsional-stiffness tailoring in the mid-span region | ≈ +3.47% controller-off flutter improvement | Passive tailoring gives useful fail-safe margin, but does not reach the full hybrid target alone |
+| Robust active-only concept | Added finite-bandwidth, delayed torsional feedback and rejected dry-unstable controllers | ≈ +6.12% flutter improvement at 100% active-only reference authority | Active control reaches the target but creates full dependence on the controller |
+| Deterministic hybrid reference | Combined a 20% GJ proxy with 50% active authority | ≈ +6.68% hybrid improvement and +3.47% controller-off margin | Demonstrated that passive and active mechanisms can share the stability burden |
+| Physics DOE + surrogate search | Varied reinforcement position, GJ gain, active authority, bandwidth and delay across 80 converged physics cases; screened 100,000 candidates | 19,217 surrogate-feasible designs, 29 Pareto-efficient, 5 shortlisted | Search the architecture trade space rather than tuning one variable at a time |
+| Final physics-verified hybrid | Shifted reinforcement to 36.5–56.5% semispan, increased the GJ proxy to +24.362%, and reduced active authority to 25.011% | **+6.131% hybrid improvement, +4.248% controller-off improvement, 0.53696 s⁻¹ dry margin** | Final architecture prioritizes lower controller dependence while preserving the target flutter gain |
+
+The key improvement is therefore **system-level**, not simply the largest possible flutter-speed increase. Compared with the robust active-only architecture, the selected hybrid reaches essentially the same total flutter improvement while using about one quarter of the active-control authority and retaining a passive margin if the controller is removed. Compared with the deterministic 50%-authority hybrid reference, it sacrifices some peak hybrid gain in exchange for much lower active dependence and a larger fail-safe margin.
+
+
 ## Benchmark credibility
 
 The wing-level model uses public geometry, modal data and measured flutter points from **NASA TM-100492**. The corrected representative validation gave a mean absolute flutter-velocity error of **6.023%** and a mean absolute flutter-frequency error of **6.766%** across Mach 0.499, 0.678, 0.901 and 0.960. The Mach 0.960 point remains the largest velocity discrepancy (+12.513%), and this limitation is carried explicitly into the project conclusions.
