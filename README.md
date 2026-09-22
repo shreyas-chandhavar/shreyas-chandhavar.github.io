@@ -9,6 +9,7 @@ Static engineering portfolio website for Shreyas G. Chandhavar.
 - Visual language: premium engineering consultancy / technical editorial
 
 ## Current featured work
+- FLEX-445 — public-benchmark hybrid flutter study using AGARD 445.6, DLM/p-k, passive-active control, ML screening and physics re-verification
 - Adjustable Lifting Fixture — analytical sizing, SolidWorks CAD and preliminary FEA
 - Multi-Element WingSail CFD — MSc thesis companion using OpenFOAM
 - Cantilever Beam Structural Analyzer — MATLAB structural sizing and parametric study
