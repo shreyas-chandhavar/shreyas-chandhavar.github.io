@@ -1,0 +1,6 @@
+candidate,selection_reason,span_start_pct,span_end_pct,GJ_gain_pct,mass_fraction_pct,active_authority_pct,bandwidth_Hz,delay_ms,physics_hybrid_improvement_pct,physics_fail_safe_improvement_pct,dry_margin_1_per_s,fully_verified
+1,Minimum active authority,36.4857,56.4857,24.362379,2.436238,25.011468,55.638286,6.333031,6.1313,4.2475,0.53696,True
+2,Minimum added mass,43.9965,63.9965,17.184169,1.718417,44.748151,38.738033,5.496883,6.1640,2.9179,0.47717,False
+3,Highest fail-safe margin,44.8124,64.8124,24.909417,2.490942,52.036818,52.450121,7.705671,8.1466,4.1824,0.44234,True
+4,Highest hybrid improvement,41.4842,61.4842,24.745403,2.474540,59.457454,59.035542,7.633502,8.7810,4.2723,0.42849,True
+5,Balanced Pareto trade,43.8195,63.8195,20.042140,2.004214,32.550095,56.083183,6.546604,5.8968,3.4058,0.51103,False
